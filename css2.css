@@ -1,0 +1,62 @@
+body {
+  background-image: url(starter-code/assets/destination/background-destination-desktop.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.line {
+  width: 700px;
+  height: 2px;
+  background-color: rgb(172, 165, 165);
+  margin-right: -300px;
+  z-index: 5;
+}
+.topright {
+  color: whitesmoke;
+  display: flex;
+  gap: 50px;
+  backdrop-filter: blur(30px);
+  padding: 20px;
+  width: 800px;
+  align-items: center;
+  padding-left: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+.leftcorner {
+  width: 50px;
+  height: 50px;
+  margin-left: 50px;
+}
+
+.firsth1 {
+  position: absolute;
+  color: white;
+  top: 30%;
+  left: 20%;
+}
+span {
+  color: gray;
+}
+.mars {
+  position: absolute;
+  top: 45%;
+  left: 17%;
+}
+.switcher {
+  display: flex;
+  color: rgb(143, 140, 140);
+  gap: 20px;
+  position: absolute;
+  right: 30%;
+  bottom: 60%;
+}
