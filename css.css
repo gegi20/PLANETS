@@ -1,83 +1,62 @@
-@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
-
 body {
-  background-image: url(starter-code/assets/home/background-home-desktop.jpg);
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.leftcorner {
-  width: 50px;
-  height: 50px;
-  margin-left: 50px;
-}
-
-.topright {
-  color: whitesmoke;
   display: flex;
-  gap: 50px;
-  backdrop-filter: blur(30px);
-  padding: 20px;
-  width: 800px;
-  align-items: center;
-  padding-left: 50px;
-}
-.top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.line {
-  width: 700px;
-  height: 2px;
-  background-color: rgb(172, 165, 165);
-  margin-right: -300px;
-  z-index: 5;
-}
-
-h4 {
-  position: absolute;
-  font-size: 30px;
-  color: rgb(223, 220, 220);
-  margin-top: 100px;
-  top: -20%;
-}
-h1 {
-  font-size: 150px;
-  color: white;
-  font-family: "Poiret One", sans-serif;
-}
-
-.middleleft {
-  position: absolute;
-  top: 35%;
-  left: 20%;
-}
-.pppp {
-  color: rgb(192, 187, 187);
-  position: absolute;
-  width: 300px;
-  bottom: -40%;
-}
-.ball {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background-color: white;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  border-radius: 100%;
-  right: 15%;
-  bottom: 20%;
+  align-items: center;
+  height: 100vh;
 }
-.baller {
-  font-size: 30px;
+.grid-container {
+  display: grid;
+  grid-template-columns: 220px 220px 220px 220px;
+  grid-template-rows: 140px 140px 70px 120px 140px;
+  grid-template-areas:
+    "box1 box2 box2 box3"
+    "box1 box2 box2 box3"
+    "box1 box4 box5 box3"
+    "box6 box4 box5 box3"
+    "box6 box7 box8 box8";
+  gap: 20px;
 }
 
-a {
-  text-decoration: none;
-  color: white;
+.grid-container .first {
+  grid-area: box1;
+
+  background-color: red;
+}
+.grid-container .second {
+  grid-area: box2;
+  background-color: rgb(0, 255, 42);
+}
+.grid-container .third {
+  grid-area: box3;
+  background-color: rgb(251, 255, 0);
+}
+.grid-container .forth {
+  grid-area: box4;
+  background-color: rgb(255, 136, 0);
+}
+.grid-container .fifth {
+  grid-area: box5;
+  background-color: rgb(247, 0, 255);
+}
+.grid-container .sixth {
+  grid-area: box6;
+  background-color: rgb(98, 0, 255);
+}
+.grid-container .seventh {
+  grid-area: box7;
+  background-color: rgb(0, 0, 0);
+}
+.grid-container .eight {
+  grid-area: box8;
+  background-color: rgb(140, 0, 255);
+}
+
+@media (max-width: 1000px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-container div {
+    padding: 10px;
+  }
 }
